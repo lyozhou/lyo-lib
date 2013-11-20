@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="D:/eclipse/workspace/lyo/Lyo-Lib/jar/stdlib.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/workspace/lyo/Lyo-Lib/jar/opencsv.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/workspace/lyo/Lyo-Lib/jar/mysql-connector-java-5.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="D:/alyo-lib/lyo-lib/Lyo-Lib/jar/google-gson-2.2.4/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
