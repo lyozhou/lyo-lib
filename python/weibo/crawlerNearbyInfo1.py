@@ -37,7 +37,7 @@ for r in results:
     saved_userLoc.add(r)
 
 saved_location = []
-row = cur.execute('select id from weibo_location order by checkin_num desc limit 301,2000')
+row = cur.execute('select id from weibo_location order by checkin_num desc limit 4,2')
 results = cur.fetchmany(row)
 for r in results:
     saved_location.append(r[0])

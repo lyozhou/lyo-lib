@@ -6,10 +6,9 @@ import webbrowser
 import time
 
 
-APP_KEY = '3711333581' # app key
-APP_SECRET = '98539126069b0723285524d79e4c7a3e' # app secret
-CALLBACK_URL = 'http://open.weibo.com/apps/3711333581/privilege/oauth' #callback url
-
+APP_KEY = '3993044532' # app key
+APP_SECRET = '8ad702541403ff5706e2a4e738558dfa' # app secret
+CALLBACK_URL = 'http://open.weibo.com/apps/3993044532/privilege/oauth' #callback url
 client = APIClient(app_key=APP_KEY,
                    app_secret=APP_SECRET,
                    redirect_uri=CALLBACK_URL)
@@ -36,14 +35,12 @@ results  = cur.fetchmany(row)
 for r in results:
     saved_userLoc.add(r)
 
-
 saved_location = []
-row = cur.execute('select id from weibo_location order by checkin_num desc limit 1,2')
+row = cur.execute('select id from weibo_location where id = "B2094654DA6EA4FD459E" or id = "B2094757D06AA1FE4599"')
 results = cur.fetchmany(row)
 for r in results:
     saved_location.append(r[0])
-
-
+    
 saved_checkUser = set()
 regex = re.compile(ur"[^\u4e00-\u9fa5a-zA-Z0-9,.\:;()'<>£¬¡£¡¢£»£º£¨£©¡°¡±¡¶¡·!£¡@#£¤%¡­¡­&*$|~¡ª]")
 def checkUserQuery(poid,page):
@@ -106,7 +103,7 @@ def checkUserQuery(poid,page):
             return 'fail'
     else:
         return 'Empty'
-
+                                    
 while len(saved_location) <> 0 :
     i = 0
     loiid = saved_location[i]
